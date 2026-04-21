@@ -40,7 +40,7 @@ int main(void) {
 
     /* Validate input */
     for(int i = 0; i < 8; i++) {
-        if(s1[i] < 0 || s1[i] > 100 || s2[i] > 100) {
+        if(s1[i] < 0 || s1[i] > 100 ||s1[i] < 0 || s2[i] > 100) {
             printf("Invalid score entered\n");
             return 1;
         }
@@ -63,7 +63,7 @@ int main(void) {
         else if (s2[i] >= 60) { gp2[i] = 3; grade2[i] = 'C'; }
         else if (s2[i] >= 50) { gp2[i] = 2; grade2[i] = 'D'; }
         else { gp2[i] = 0; grade2[i] = 'F'; }
-        s2_contribution += (float)gp1[i] * units_2[i];
+        s2_contribution += (float)gp2[i] * units_2[i];
     }
 
     /* Compute Semester I GPA */
@@ -95,11 +95,11 @@ int main(void) {
     printf("%-10s | %-6.1f | %-5c | %-5d | %-5d | %.1f\n", "TEMB 1201", s2[0], grade2[0], gp2[0], units_2[0], (float)gp2[0]*units_2[0]);
     printf("%-10s | %-6.1f | %-5c | %-5d | %-5d | %.1f\n", "TEMB 1202", s2[1], grade2[1], gp2[1], units_2[1], (float)gp2[1]*units_2[1]);
     printf("%-10s | %-6.1f | %-5c | %-5d | %-5d | %.1f\n", "TEMB 1203", s2[2], grade2[2], gp2[2], units_2[2], (float)gp2[2]*units_2[2]);
-    printf("%-10s | %-6.1f | %-5c | %-5d | %-5d | %.1f\n", "TEMB 1205", s2[3], grade2[3], gp2[3], units_2[3], (float)gp2[3]*units_2[3]);
-    printf("%-10s | %-6.1f | %-5c | %-5d | %-5d | %.1f\n", "TEMB 1206", s2[4], grade2[4], gp2[4], units_2[4], (float)gp2[4]*units_2[4]);
-    printf("%-10s | %-6.1f | %-5c | %-5d | %-5d | %.1f\n", "TEMB 1207", s2[5], grade2[5], gp2[5], units_2[5], (float)gp2[5]*units_2[5]);
-    printf("%-10s | %-6.1f | %-5c | %-5d | %-5d | %.1f\n", "TEMB 1208", s2[6], grade2[6], gp2[6], units_2[6], (float)gp2[6]*units_2[6]);
-    printf("%-10s | %-6.1f | %-5c | %-5d | %-5d | %.1f\n", "TEMB 1209", s2[7], grade2[7], gp2[7], units_2[7], (float)gp2[7]*units_2[7]);
+    printf("%-10s | %-6.1f | %-5c | %-5d | %-5d | %.1f\n", "TEMB 1204", s2[3], grade2[3], gp2[3], units_2[3], (float)gp2[3]*units_2[3]);
+    printf("%-10s | %-6.1f | %-5c | %-5d | %-5d | %.1f\n", "TEMB 1205", s2[4], grade2[4], gp2[4], units_2[4], (float)gp2[4]*units_2[4]);
+    printf("%-10s | %-6.1f | %-5c | %-5d | %-5d | %.1f\n", "TEMB 1206", s2[5], grade2[5], gp2[5], units_2[5], (float)gp2[5]*units_2[5]);
+    printf("%-10s | %-6.1f | %-5c | %-5d | %-5d | %.1f\n", "TEMB 1207", s2[6], grade2[6], gp2[6], units_2[6], (float)gp2[6]*units_2[6]);
+    printf("%-10s | %-6.1f | %-5c | %-5d | %-5d | %.1f\n", "TEMB 1208", s2[7], grade2[7], gp2[7], units_2[7], (float)gp2[7]*units_2[7]);
     
 
     printf("\nSemester I GPA: %.2f\n", gpa_1);
